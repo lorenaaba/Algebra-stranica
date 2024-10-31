@@ -1,0 +1,103 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+header {
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+header h1 
+{
+    margin: 0;
+}
+
+#bgvideo
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#zaglavlje
+{
+    color: #ee9445;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+#nav 
+{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+#nav a
+{
+    position: relative;
+    color: yellow;
+    text-decoration: none;
+}
+
+#nav i
+{
+    color: #ee9445;
+    margin-right: 5px;
+}
+
+#nav a:hover
+{
+    color: #bd2740;
+}
+
+#nastavni-plan-container {
+    display: none;
+}
+
+#pocetna
+{
+    color: #bd2740;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Prijava.css">
+    <link rel="stylesheet" href="Kontakt.css">
+    <script src="https://kit.fontawesome.com/4c07979b3c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava</title>
+</head>
+<body>
+    <img src="img/zaiskri-bg.jpg" alt="slika-zaiskri" id="zaiskri-bg">
+    <header>
+        <div id="zaglavlje" align="left">
+            <h1>Visoko učilište Algebra</h1>
+        </div>
+            <div id="nav">
+                <a href="Prijava.html" id="login-logout">Prijava/Odjava</a>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-house"></i>
+                <a href="Algebra.html">Početna</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-comment"></i>
+                <a href="Onama.html">O nama</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-newspaper"></i>
+                <a href="novosti.html">Novosti</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="nastavni-plan-container" style="display: none;">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <a href="nastavniPlan.html" id="nastavni-plan">Nastavni plan</a>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-address-book"></i>
+                <a href="#" class="modal-link" id="contact-link">Kontakt</a>
+            </div>
+    </header>
+
+        <form class="Prijava-form" >
+        <h2>Prijava korisnika</h2>
+        <div class="input-box">
+            <label for="txtLogIn">Korisničko ime:</label>
+            <input type="text" name="KorisnickoIme" id="txtLogIn" required>
+        </div>
+        <div class="input-box">
+            <label for="txtPassword">Lozinka:</label>
+            <input type="password" name="Lozinka" id="txtPassword" required>
+        </div> 
+    <button type="submit" class="submit-btn">Prijavi se</button>
+        <p>Nemas račun? <a href="#" id="registracija-link">Registriraj se</a></p>
+</form>
+
+        <form class="Registracija-form" style="display: none;">
+            <h2>Registracija korisnika</h2>
+            <div class="input-box">
+                <label for="txtRegistration">Korisničko ime:</label>
+                <input type="text" id="txtRegistration" name="txtRegistration" required>
+            </div>
+            <div class="input-box">
+                <label for="txtPassword">Lozinka:</label>
+                <input type="password" id="txtRegistrationPassword" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Registriraj se</button>
+        </form>
+
+   <div class="podnozje">
+    <h2>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h2>
+    <h2 id="zaiskri">ZAISKRI</h2>
+   </div>
+
+   <div class="modal" id="contact-modal">
+    <div class="contact-form">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2><i class="fa-solid fa-address-book">&nbsp;</i>Kontaktirajte nas</h2>
+        <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+            <div class="contact-data">
+                <label for="full-name">Puno ime:</label>
+                <input type="text" name="full-name" id="full-name" required>
+            </div>
+            <div class="contact-data">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="contact-data">
+                <label for="importance">Važnost poruke:</label>
+                <select name="importance" id="importance" required>
+                    <option value="niska">Niska</option>
+                    <option value="srednja">Srednja</option>
+                    <option value="visoka">Visoka</option>
+                </select>
+            </div>
+            <div class="contact-data">
+                <label for="message">Poruka:</label>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="contact-data">
+                <label>
+                    <input type="checkbox" name="receiveNewsletter" value="yes">Želim primati obavijesti
+                </label>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="submit">Pošalji</button>
+                <button type="reset" class="reset">Odustani</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="Kontakt.js"></script>
+<script src="Prijava.js"></script>
+<script src="NastavniPlan.js"></script>
+
+</body>
+</html>

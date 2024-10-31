@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+    <link rel="stylesheet" href="Novosti.css">
+    <link rel="stylesheet" href="Kontakt.css">
+    <script src="https://kit.fontawesome.com/4c07979b3c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novosti</title>
+</head>
+<body>
+    <header>
+        <div id="zaglavlje" align="left">
+            <h1>Visoko učilište Algebra</h1>
+        </div>
+            <div id="nav">
+                <a href="Prijava.html">Prijava/Odjava</a>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-house"></i>
+                <a href="Algebra.html">Početna</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-comment"></i>
+                <a href="Onama.html">O nama</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-newspaper"></i>
+                <a href="novosti.html">Novosti</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="nastavni-plan-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <a href="nastavniPlan.html" id="nastavni-plan">Nastavni plan</a>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-address-book"></i>
+                <a href="#" class="modal-link" id="contact-link">Kontakt</a>
+            </div>
+    </header>
+
+    <h2 id="naslov-stranica" align="center">Novosti</h2>
+
+    <div class="novosti">
+    <div id="novost1" class="novost animate" onclick="showNews('novost1')">
+        <img src="img/novost1.jpg" id="novosti-slika" >
+        <div id="novosti-tekst">
+        <h3 id="novosti-datum">28.08.2019.</h3>
+        <p>Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje izvrsnosti na natjecanju Worldskills Kazan 2019.</p>
+    </div>
+    </div>
+    <div id="novost2" class="novost animate" onclick="showNews('novost2')">
+        <img src="img/novost2.jpg" id="novosti-slika">
+        <div id="novosti-tekst">
+        <h3 id="novosti-datum">22.07.2019.</h3>
+        <p>Nagrađujemo izvrsnost: Objavljujemo rezultate stipendijskog natječaja šk.god. 2018./2019.</p>
+    </div>
+    </div>
+    <div id="novost3" class="novost animate" onclick="showNews('novost3')">
+        <img src="img/novost3.jpg" id="novosti-slika">
+        <div id="novosti-tekst">
+        <h3 id="novosti-datum">18.04.2019.</h3>
+        <p>Digitalno Junior ljeto</p>
+    </div>
+    </div>
+</div>
+
+<div id="novosti-detalji-novost1" style="display: none;">
+    <h2 id="novost-naslov-novost1"></h2>
+    <img id="slika-novost-novost1" src="" alt="" class="novosti-slika">
+    <h2 id="novost-podnaslov-novost1"></h2>
+    <p id="novost-content-novost1"></p>
+    <div class="galerija-slika">
+        <a id="galerija-slika1" href="" data-fancybox="gallery">
+            <img id="slika1" src="img/galerija1.jpg" alt="">
+        </a>
+        <a id="galerija-slika2" href="" data-fancybox="gallery">
+        <img id="slika2" src="img/galerija2.jpg" alt="">
+    </a>
+    </div>
+    <a id="galerija-video" href="" data-fancybox="gallery">
+        <video id="video" src="" controls></video>
+    </a>
+</div>
+
+<div id="novosti-detalji" style="display: none;">
+    <h2 id="novost-naslov"></h2>
+    <img id="slika-novost" src="" alt="" class="novosti-slika">
+    <h2 id="novost-podnaslov"></h2>
+    <p id="novost-content"></p>
+</div>
+
+<div id="zaiskri-container">
+<img src="img/zaiskri-bg.jpg" alt="slika-zaiskri" id="zaiskri-bg">
+<div class="podnozje">
+    <h2>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h2>
+    <h2 id="zaiskri">ZAISKRI</h2>
+   </div>
+</div>
+</div>
+
+
+    <div class="modal" id="contact-modal">
+        <div class="contact-form">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2><i class="fa-solid fa-address-book">&nbsp;</i>Kontaktirajte nas</h2>
+            <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+                <div class="contact-data">
+                    <label for="full-name">Puno ime:</label>
+                    <input type="text" name="full-name" id="full-name" required>
+                </div>
+                <div class="contact-data">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="contact-data">
+                    <label for="importance">Važnost poruke:</label>
+                    <select name="importance" id="importance" required>
+                        <option value="niska">Niska</option>
+                        <option value="srednja">Srednja</option>
+                        <option value="visoka">Visoka</option>
+                    </select>
+                </div>
+                <div class="contact-data">
+                    <label for="message">Poruka:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="contact-data">
+                    <label>
+                        <input type="checkbox" name="receiveNewsletter" value="yes">Želim primati obavijesti
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit">Pošalji</button>
+                    <button type="reset" class="reset">Odustani</button>
+                </div>
+            </form>
+        </div>
+
+    
+    <script src="Kontakt.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        const newDetails = {
+            novost1: {
+                title: 'Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje izvrsnosti.',
+                image: 'img/novost1.jpg',
+                subtitle: 'WorldSkills natjecanje - Kazan 2019.',
+                content: 'Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na kojem je sudjelovalo 1300 natjecatelja iz cijelog svijeta, trud se itekako isplatio. Josip, student 3. godine preddiplomskog studija sistemskog inženjerstva osvojio je 12. mjesto u vještini IT Networks and System Administration te osvojio medalju zvrsnosti! Čestitke Josipu ali i njegovim/našim mentorima koji su ga pripremali za ovo natjecanje – voditelju studija sistemskog inženjerstva Silviju Papiću, voditelju katedre za operacijske sustave – Vedranu Dakiću i asistentu na studiju sistemskog inženjerstva – Jasminu Redžepagiću. Čestitke i našem studentu 3.godine preddiplomskog studija programskog inženjerstva Josipu Horvatu i mentoru voditelju katedre za programsko inženjerstvo - Goranu Đambiću na osvojenom 16.mjestu u vještini IT Software Solutions for Business.',
+                image1: 'img/galerija1.jpg',
+                image2: 'img/galerija2.jpg',
+                video: 'worldskills.mp4' 
+            },
+            novost2: {
+                title: 'Rezultati stipendijskog natječaja 2018./2019.!',
+                image: 'img/novost2.jpg',
+                subtitle: 'Stipendijski natječaj šk.god. 2018./2019.',
+                content: 'Nakon velikog broja prijava koje smo primili, detaljnom analizom i provjerom utvrdili smo dobitnike ovogodišnjeg stipendijskog natječaja za maturante! Stipendiju u vrijednosti od 10.000,00 kuna na potrošačkoj kartici dobivaju: Heidi Sokolovski iz Zagreba - za najbolji rezultat iz Matematike na A razini osvojila je stipendiju u iznosu od 10.000,00 kn. Tereza Žugaj iz Zagreba - za najbolji rezultat iz Matematike na B razini osvojila je stipendiju u iznosu od 10.000,00 kn. Dalija Romac iz Sinja - za najbolji rezultat iz Hrvatskog jezika na A razini te dodatna 204 boda za rezultat iz Matematike A i Engleskog jezika A osvojila je stipendiju u iznosu od 10.000,00 kn. Ella Milinović iz Zagreba - za najbolji rezultat iz Hrvatskog jezika na B razini osvojila je stipendiju u iznosu od 10.000,00 kn. Borna Skračić iz Zadra – za najbolji rezultat iz Engleskog jezika na A razini osvojio je stipendiju u iznosu od 10.000,00 kn. Lukas Božić iz Umaga - za najbolji rezultat iz Engleskog jezika na B razini osvojio je stipendiju u iznosu od 10.000,00 kn.',
+                image1: '',
+                image2: '',
+                video: ''
+
+            },
+            novost3: {
+                title: '',
+                image: 'img/novost3.jpg',
+                subtitle: 'Digitalno Junior ljeto',
+                content: 'Algebra Junior organizira edukativne i zabavne ljetne praznike za sve osnovnoškolce! I ove smo godine pripremili digitalne radionice za djecu čiji je fokus rješavanja raznih problema korištenjem tehnologije, multimedije, digitalnog dizajna i komunikacija te stvaranju sadržaja u svim multimedijskim i softverskim oblicima. Radionice se održavaju u sklopu Digitalnog ljetnog kampa u Crikvenici i Digitalne ljetne škole u Zagrebu kako bismo se družili, zabavljali i učili i na moru i na kontinentu! Na digitalnom kampu i u školi provodit će se dva različita programa koji su namijenjena djeci od 1. do 8. razreda. Ovisno o odabranom terminu, polaznici će prolaziti kroz 1. ili 2. program, a u slučaju pohađanja dvotjednih programa – oba. U prvom programu nađe nindže uče biti glazbeni menadžeri dok su u drugom novinari i kreatori informacija masovnih medija. Provjerite termine, cijene i lokacije škole i kampa na sljedećem linku.',
+                image1: '',
+                image2: '',
+                video: ''
+            }
+        };
+
+        function showNews(newsId)
+        {
+            var news = newDetails[newsId];
+
+            document.getElementById('novosti-detalji').style.display = 'none';
+            document.getElementById('novosti-detalji-novost1').style.display = 'none';
+
+    if (newsId === 'novost1') {
+        document.getElementById('novost-naslov-novost1').innerText = news.title;
+        document.getElementById('slika-novost-novost1').src = news.image;
+        document.getElementById('novost-podnaslov-novost1').innerText = news.subtitle;
+        document.getElementById('novost-content-novost1').innerText = news.content;
+
+        if (news.image1) {
+            document.getElementById('galerija-slika1').style.display = 'inline-block';
+            document.getElementById('slika1').src = news.image1;
+            document.getElementById('galerija-slika1').href = news.image1;
+        }
+
+        if (news.image2) {
+            document.getElementById('galerija-slika2').style.display = 'inline-block';
+            document.getElementById('slika2').src = news.image2;
+            document.getElementById('galerija-slika2').href = news.image2;
+        }
+
+        if (news.video) {
+            document.getElementById('galerija-video').style.display = 'inline-block';
+            document.getElementById('video').src = news.video;
+            document.getElementById('galerija-video').href = news.video;
+        }
+
+        document.getElementById('novosti-detalji-novost1').style.display = 'block';
+    } else {
+        document.getElementById('novost-naslov').innerText = news.title;
+        document.getElementById('slika-novost').src = news.image;
+        document.getElementById('novost-podnaslov').innerText = news.subtitle;
+        document.getElementById('novost-content').innerText = news.content;
+
+        document.getElementById('galerija-slika1').style.display = 'none';
+        document.getElementById('slika1').style.display = 'none';
+        document.getElementById('galerija-slika2').style.display = 'none';
+        document.getElementById('slika2').style.display = 'none';
+        document.getElementById('galerija-video').style.display = 'none';
+        document.getElementById('video').style.display = 'none';
+
+        document.getElementById('novosti-detalji').style.display = 'block';
+    }
+
+    document.querySelector('.novosti').style.display = 'none';
+    document.getElementById('naslov-stranica').style.display = 'none';
+}
+    </script>
+
+    <script>
+        function isInView(element)
+        {
+            const rect = element.getBoundingClientRect();
+            return(
+                rect.top >=0 && rect.left >=0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function activateAnimation()
+    {
+        const elements = document.querySelectorAll('.animate');
+        elements.forEach(element => {
+            if(isInView(element))
+            {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', activateAnimation);
+    window.addEventListener('load', activateAnimation);
+    window.addEventListener('resize', activateAnimation);
+    </script>
+
+    <script src="Prijava.js"></script>
+</body>
+</html>
+
